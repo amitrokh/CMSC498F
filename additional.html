@@ -105,12 +105,15 @@
         <div class="col-md-12">
           <p>This manual describes ROS installation process, as well as basic usage
             patterns. All materials are taken from the official
-            <a href="http://wiki.ros.org/kinetic/Installation/Ubuntu">ROS Wiki</a>. The guide describes installation of
-            <a href="http://wiki.ros.org/kinetic">ROS Kinetic </a>on Ubuntu 16.04. Ubuntu 16.04 is highly advisable to use, as other versions
-            of Ubuntu were found to be less stable on many laptops. Keep in mind, that
-            a certain distribution of ROS will work only with a limited set of Ubuntu
-            vrsions. If you need to install a different combination of ROS/Ubuntu please
-            refer to the
+            <a href="http://wiki.ros.org/indigo/Installation/Ubuntu">ROS Wiki</a>. The guide describes installation of
+            <a href="http://wiki.ros.org/indigo">ROS Indigo </a>on
+            <a href="http://releases.ubuntu.com/14.04/">Ubuntu 14.04</a>. We are not using the latest version of Ubuntu and ROS as they are not
+            well supported (yet) and many packages we will require have not been ported
+            to the later versions of ROS. You still may try the latest distributions
+            of Ubuntu/ROS and try to build missing packages manually. Keep in mind,
+            that a certain distribution of ROS will work only with a limited set of
+            Ubuntu versions. If you need to install a different combination of ROS/Ubuntu
+            please refer to the
             <a href="http://wiki.ros.org/Distributions">ROS Wiki</a>.</p>
         </div>
       </div>
@@ -124,24 +127,25 @@
           <p>Configure your Ubuntu repositories to allow "restricted," "universe,"
             and "multiverse." You can follow
             <a href="https://help.ubuntu.com/community/Repositories/Ubuntu">the Ubuntu guide </a>for instructions on doing this. Open Ubuntu terminal (Ctrl-Alt-t or Unity
-            Dash) and input the following sequence of commands:
+            Dash) and input the following sequence of commands (
+            <a href="http://wiki.ros.org/indigo/Installation/Ubuntu">complete manual</a> ):
             <br>
             <br>
           </p>
           <ol>
             <li>
               <code>sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release
-                -sc) main" &gt; /etc/apt/sources.list.d/ros-latest.list'&nbsp;</code>
+                -sc) main" &gt; /etc/apt/sources.list.d/ros-latest.list'</code>
             </li>
             <li>
-              <code>sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key
-                421C365BD9FF1F717815A3895523BAEEB01FA116&nbsp;</code>
+              <code>sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net --recv-key
+                421C365BD9FF1F717815A3895523BAEEB01FA116</code>
             </li>
             <li>
               <code>sudo apt-get update</code>
             </li>
             <li>
-              <code>sudo apt-get install ros-kinetic-desktop-full # This step might take some
+              <code>sudo apt-get install ros-indigo-desktop-full # This step might take some
                 time</code>
             </li>
             <li>
@@ -151,7 +155,7 @@
               <code>rosdep update</code>
             </li>
             <li>
-              <code>echo "source /opt/ros/kinetic/setup.bash" &gt;&gt; ~/.bashrc</code>
+              <code>echo "source /opt/ros/indigo/setup.bash" &gt;&gt; ~/.bashrc</code>
             </li>
             <li>
               <code>source ~/.bashrc</code>
@@ -175,6 +179,14 @@
     <!--/.container-->
     <!-- Bootstrap core JavaScript==================================================-
     ->
+
+
+
+
+
+
+
+
 
 
 
