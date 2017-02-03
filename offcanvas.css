@@ -12,6 +12,9 @@ body {
 footer {
   padding: 30px 0;
 }
+.overview-col {
+  padding-left: 0;
+}
 
 /*
  * Off Canvas
