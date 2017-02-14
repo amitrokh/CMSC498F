@@ -1,5 +1,4 @@
-# websites
-Sometimes I just want to create a website...
+# CMSC498F Website
 
 + [Website link](https://amitrokh.github.io/CMSC498F/)
 + Bootstrap: [link](http://getbootstrap.com/)
