@@ -12,7 +12,6 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
@@ -75,46 +74,82 @@
     </nav>
     <!-- /.navbar -->
     <div class="container">
-      <div class="row row-offcanvas row-offcanvas-right">
-        <div class="col-xs-12 col-sm-9">
-          <p class="pull-right visible-xs">
-            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-          </p>
-          <h2 contenteditable="true">Additional Materials</h2>
-          <div class="row-xs-12">
-            <p>Most of the class projects will require implementation of a certain algorithm
-              under
-              <a href="http://www.ros.org/">ROS </a>framework and its subsequent demonstration on a real robot (usually TurtleBot
-              or Baxter, but other robots are available as well). Since all robots run
-              under Ubuntu Linux and controlled by ROS, you should be confident enough
-              with working on Linux (Ubuntu or Debian) and programming with ROS using
-              C/C++ or Python.</p>
-            <!--/row-->
-          </div>
-          <hr>
-          <div class="row">
-            <div class="col-xs-6 col-lg-4">
-              <h2>ROS Tutorials</h2>
-              <p>Learn how to install ROS, work with tf, configure your gazebo simulation
-                and a lot of other cool things!</p>
-              <p>
-                <a class="btn btn-default" href="ros.html" role="button">View details »</a>
-              </p>
-            </div>
-            <!--/.col-xs-6.col-lg-4-->
-            <div class="col-xs-6 col-lg-4">
-              <h2>Hacking TurtleBot</h2>
-              <p>Working with a real robot is not the same as working with a simulator.
-                Learn how to configure networking, launch the drivers and more!</p>
-              <p>
-                <a class="btn btn-default" href="https://github.com/amitrokh/adventure/wiki/Hacking-TurtleBot" role="button">View details »</a>
-              </p>
-            </div>
-          </div>
-          <!--/row-->
+      
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Getting started with ROS</h3>
         </div>
-        <!--/.col-xs-12.col-sm-9-->
-        <!--/.sidebar-offcanvas-->
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p>This manual describes ROS installation process, as well as basic usage
+            patterns. All materials are taken from the official
+            <a href="http://wiki.ros.org/indigo/Installation/Ubuntu">ROS Wiki</a>. The guide describes installation of
+            <a href="http://wiki.ros.org/indigo">ROS Indigo </a>on
+            <a href="http://releases.ubuntu.com/14.04/">Ubuntu 14.04</a>. We are not using the latest version of Ubuntu and ROS as they are not
+            well supported (yet) and many packages we will require have not been ported
+            to the later versions of ROS. You still may try the latest distributions
+            of Ubuntu/ROS and try to build missing packages manually. Keep in mind,
+            that a certain distribution of ROS will work only with a limited set of
+            Ubuntu versions. If you need to install a different combination of ROS/Ubuntu
+            please refer to the
+            <a href="http://wiki.ros.org/Distributions">ROS Wiki</a>.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h4 contenteditable="false">Installation&nbsp;</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p>Configure your Ubuntu repositories to allow "restricted," "universe,"
+            and "multiverse." You can follow
+            <a href="https://help.ubuntu.com/community/Repositories/Ubuntu">the Ubuntu guide </a>for instructions on doing this. Open Ubuntu terminal (Ctrl-Alt-t or Unity
+            Dash) and input the following sequence of commands (
+            <a href="http://wiki.ros.org/indigo/Installation/Ubuntu">complete manual</a>):
+            <br>
+            <br>
+          </p>
+          <ol>
+            <li>
+              <code>sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release
+                -sc) main" &gt; /etc/apt/sources.list.d/ros-latest.list'</code>
+            </li>
+            <li>
+              <code>sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net --recv-key
+                421C365BD9FF1F717815A3895523BAEEB01FA116</code>
+            </li>
+            <li>
+              <code>sudo apt-get update</code>
+            </li>
+            <li>
+              <code>sudo apt-get install ros-indigo-desktop-full # This step might take some
+                time</code>
+            </li>
+            <li>
+              <code>sudo rosdep init</code>
+            </li>
+            <li>
+              <code>rosdep update</code>
+            </li>
+            <li>
+              <code>echo "source /opt/ros/indigo/setup.bash" &gt;&gt; ~/.bashrc</code>
+            </li>
+            <li>
+              <code>source ~/.bashrc</code>
+            </li>
+            <li>
+              <code>sudo apt-get install python-rosinstall</code>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p>Now, to test your installation, please proceed to the
+            <a href="http://wiki.ros.org/ROS/Tutorials">ROS Tutorials</a>.</p>
+        </div>
       </div>
       <!--/row-->
       <hr>
@@ -126,6 +161,30 @@
     <!--/.container-->
     <!-- Bootstrap core JavaScript==================================================-
     ->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
